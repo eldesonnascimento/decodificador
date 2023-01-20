@@ -1,0 +1,161 @@
+
+body {
+  transform: scale(1);
+  transform-origin: 0 0;
+  background-color: #dde3eb;
+}
+.aluraLogo {
+  display: inline-block;
+  position: absolute;
+  margin-right: 100%;
+  width: 19px;
+  margin-left: 10vh;
+  margin-top: 3vh;
+}
+section {
+  display: inline-block;
+}
+
+.texto {
+  display: inline-block;
+  position: relative;
+  background-color: #dde3eb;
+  color: #0a3871;
+  text-decoration: none;
+  outline: 0;
+  padding-top: 100px;
+  scroll-snap-type: none;
+  scroll-margin: 0;
+  scroll-padding-top: 0%;
+  margin-left: 0%;
+  margin-left: 20%;
+  border: none;
+  width: 141px;
+  margin-top: 20%;
+  padding-right: 32px;
+  padding-bottom: 126px;
+  right: -113px;
+  top: -53px;
+}
+.imagemExclamacao {
+  display: inline-block;
+  position: relative;
+  right: 243px;
+}
+
+.aviso {
+  display: inline-block;
+  border: #0a3871;
+  position: relative;
+  color: #0a3871;
+  margin-right: 0%;
+  margin-left: -239px;
+}
+.imagemLupa {
+  width: 167px;
+  display: flex;
+  border: #ffffff solid;
+  background-color: #ffffff;
+  border-width: 64px 13px 195px;
+  border-radius: 6px;
+  margin: 0 0 0 92%;
+}
+#saida {
+  position: relative;
+  display: flex;
+  float: right;
+  top: -201px;
+  right: -158px;
+  width: 179px;
+  z-index: 1;
+  border: none;
+}
+
+#botaoEncriptar {
+  display: inline;
+  border: 0ch;
+  border-radius: 6%;
+  background-color: #0a3871;
+  color: antiquewhite;
+  margin-top: 2%;
+  margin-left: 10%;
+  width: 150px;
+  height: 40px;
+}
+
+#botaoDesencriptar {
+  display: inline;
+  color: #0a3871;
+  border-color: #0a3871;
+  background-color: transparent;
+  border-radius: 7%;
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 150px;
+  height: 40px;
+  -webkit-border-radius: 7%;
+  -moz-border-radius: 7%;
+  -ms-border-radius: 7%;
+  -o-border-radius: 7%;
+}
+#botaoCopiar {
+  position: relative;
+  border: 10px;
+  margin-top: 0px;
+  margin-left: 69px;
+  border: 0ch;
+  border-radius: 6%;
+  background-color: #0a3871;
+  color: antiquewhite;
+  width: 167px 0px;
+  height: 38px;
+  right: -324px;
+  top: -41px;
+  align-items: center;
+  width: 139px;
+}
+.textoSaida {
+  position: absolute;
+  right: 26%;
+  outline: 0;
+  scroll-snap-type: none;
+  scroll-margin: 0;
+  border: none;
+}
+@media screen and (max-width: 480px) {
+  .textoSaida {
+    display: block;
+    right: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .imagemLupa {
+    width: auto;
+    margin: 0 0 0px 102%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #botaoCopiar {
+    right: -408px;
+    top: -202px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #saida {
+    position: relative;
+    display: flex;
+    float: right;
+    top: -203px;
+    right: -296px;
+    width: 179px;
+    z-index: 1;
+    border: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .aluraLogo .texto {
+    display: block;
+    align-items: center;
+  }
+}
+>>>>>>> 76ac47a53b06036de59d4a0550ec6ab2edf6ae1b

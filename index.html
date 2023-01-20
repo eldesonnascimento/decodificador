@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./reset.css" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>encriptador</title>
+  </head>
+  <body>
+    <header><img src="./Vector.png" class="aluraLogo" /></header>
+    <main>
+      <section>
+        <textarea
+          placeholder="Digite seu texto aqui..."
+          type="text"
+          id="texto"
+          class="texto"
+        ></textarea>
+        <img
+          src="./apenas letras minusculas e sem acento.png"
+          id="esclamacao"
+          class="imagemExclamacao"
+        />
+        <p class="aviso">Apenas letras minúsculas e sem acento</p>
+
+        <button id="botaoEncriptar">Encriptar</button>
+
+        <button id="botaoDesencriptar">Desencriptar</button>
+      </section>
+      <section class="textoSaida">
+        <img src="./High quality products 1 1.png" class="imagemLupa" />
+        <textarea
+          type="text"
+          id="saida"
+          class="saida"
+          cols="30"
+          rows="10"
+          placeholder="seu texto encriptado sairá aqui..."
+        ></textarea>
+        <button id="botaoCopiar">copiar</button>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script>
+      document
+        .getElementById("botaoEncriptar")
+        .addEventListener("click", function () {
+          var texto = document.getElementById("texto").value;
+
+          // Encripte o texto
+          var textoEncriptado = encriptar(texto);
+
+          document.getElementById("saida").value = textoEncriptado;
+        });
+
+      document
+        .getElementById("botaoDesencriptar")
+        .addEventListener("click", function () {
+          var texto = document.getElementById("#text").value;
+
+          var textoDesencriptado = desencriptar(texto);
+
+          document.getElementById("texto").value = textoDesencriptado;
+        });
+      function encriptar(texto) {
+        return texto
+          .replace(/e/g, "enter")
+          .replace(/i/g, "imes")
+          .replace(/a/g, "ai")
+          .replace(/o/g, "ober")
+          .replace(/u/g, "ufat");
+      }
+
+      function desencriptar(texto) {
+        return texto
+          .replace(/enter/g, "e")
+          .replace(/imes/g, "i")
+          .replace(/ai/g, "a")
+          .replace(/ober/g, "o")
+          .replace(/ufat/g, "u");
+      }
+      document.getElementById("botaoEncriptar");
+      document
+        .getElementById("botaoDesencriptar")
+        .addEventListener("click", function () {
+          var texto = document.getElementById("texto").value;
+
+          // Desencripte o texto
+          var textoDesencriptado = desencriptar(texto);
+
+          // Atualize o valor do textarea com o texto desencriptado
+          document.getElementById("saida").value = textoDesencriptado;
+        });
+
+      //botao de copiar
+
+      //parte de fazer o botao de copiar//
+      function copiar() {
+        copy.select();
+        alert("texto copiado");
+      }
+      document
+        .getElementById("botaoCopiar")
+        //ao clicar no botao abre a função:
+        .addEventListener("click", function () {
+          // Seleciona o texto do elemento textarea
+          var texto = document.querySelector("#texto").value;
+
+          // Crie um elemento input com o texto selecionado
+          var input = document.createElement("input");
+          input.value = texto;
+          document.body.appendChild(input);
+
+          // Copia o texto do elemento input
+          input.select();
+          document.execCommand("copy");
+
+          // Remova o elemento input da página
+          document.body.removeChild(input);
+
+          alert("Texto copiado com sucesso!");
+        });
+    </script>
+  </body>
+</html>
